@@ -1,0 +1,32 @@
+server:
+  port: 9090
+
+  
+spring:
+   mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+      
+      
+   data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: stockApp
+    
+     
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - "*"
+      base-path: "/my-actuator"
+      
+  endpoint:
+    shutdown:
+      enabled: true
+      
+  
+        
+         
